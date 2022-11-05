@@ -1,6 +1,6 @@
 import flet
 from flet import Column, ElevatedButton, Text, TextField
-import logic.logic as logic
+import logic.codehs_logic as codehs_logic
 import webbrowser
 
 def main(page):
@@ -11,11 +11,11 @@ def main(page):
     # t2 = Text(value="type esc to start typing")
 
     def btn_click(e):
-        webbrowser.open(logic.getUrl(module.value))
+        webbrowser.open(codehs_logic.getUrl(module.value))
         
     def btn_click2(e):
-        code = logic.getCode(module.value)
-        logic.type(code)
+        code = codehs_logic.getCode(module.value)
+        codehs_logic.type(code)
 
     page.add(
         t,
